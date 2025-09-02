@@ -1,0 +1,50 @@
+{
+  "name": "ai-web-user",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TypeScript Express REST API with hot reload",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --transpile-only --poll --ignore-watch node_modules --no-notify src/index.ts",
+    "build": "rimraf dist && tsc -p tsconfig.json",
+    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
+    "format": "prettier --check .",
+    "format:write": "prettier --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "*",
+    "cors": "*",
+    "helmet": "*",
+    "dotenv": "*",
+    "zod": "*"
+  },
+  "devDependencies": {
+    "typescript": "*",
+    "ts-node-dev": "*",
+    "@types/node": "*",
+    "@types/express": "*",
+    "@types/cors": "*",
+    "@types/helmet": "*",
+    "eslint": "*",
+    "@typescript-eslint/parser": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-config-airbnb-typescript": "*",
+    "eslint-plugin-import": "*",
+    "eslint-import-resolver-typescript": "*",
+    "prettier": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-prettier": "*",
+    "cross-env": "*",
+    "rimraf": "*"
+  }
+}
