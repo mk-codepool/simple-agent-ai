@@ -5,4 +5,5 @@ export enum ApiKeyName {
 export interface ApiKey {
     id: string;
     key: string;
+    url: string;
 }

@@ -12,7 +12,8 @@
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "format": "prettier --check .",
     "format:write": "prettier --write .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "start:mcp:playwright": "mcp-server-playwright --port 8931 --isolated"
   },
   "keywords": [],
   "author": "",
@@ -21,30 +22,33 @@
     "node": ">=18"
   },
   "dependencies": {
-    "express": "*",
+    "@openai/agents": "^0.0.8",
+    "@playwright/mcp": "^0.0.34",
     "cors": "*",
-    "helmet": "*",
     "dotenv": "*",
-    "zod": "*"
+    "express": "*",
+    "helmet": "*",
+    "zod": "3.25.67"
   },
   "devDependencies": {
-    "typescript": "*",
-    "ts-node-dev": "*",
-    "@types/node": "*",
-    "@types/express": "*",
     "@types/cors": "*",
+    "@types/express": "*",
     "@types/helmet": "*",
-    "eslint": "*",
-    "@typescript-eslint/parser": "*",
+    "@types/node": "*",
     "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "cross-env": "*",
+    "eslint": "*",
     "eslint-config-airbnb-base": "*",
     "eslint-config-airbnb-typescript": "*",
-    "eslint-plugin-import": "*",
-    "eslint-import-resolver-typescript": "*",
-    "prettier": "*",
     "eslint-config-prettier": "*",
+    "eslint-import-resolver-typescript": "*",
+    "eslint-plugin-import": "*",
     "eslint-plugin-prettier": "*",
-    "cross-env": "*",
-    "rimraf": "*"
+    "playwright": "^1.55.0",
+    "prettier": "*",
+    "rimraf": "*",
+    "ts-node-dev": "*",
+    "typescript": "*"
   }
 }
