@@ -13,7 +13,9 @@
     "format": "prettier --check .",
     "format:write": "prettier --write .",
     "typecheck": "tsc --noEmit",
-    "start:mcp:playwright": "mcp-server-playwright --port 8931 --isolated"
+    "start:mcp:playwright": "mcp-server-playwright --port 8931 --isolated",
+    "playwright": "playwright",
+    "postinstall": "npx playwright install chromium"
   },
   "keywords": [],
   "author": "",
