@@ -6,9 +6,14 @@ config();
 
 const port: number = Number(process.env.PORT) || 3000;
 
-const agentManager: AgentManager = new AgentManager();
-const expressServer = new ExpressServer(agentManager);
+async function main() {
+  const agentManager: AgentManager = new AgentManager();
+  await agentManager.init();
+  const expressServer = new ExpressServer(agentManager);
+  
+  expressServer.start(port);
+}
 
-expressServer.start(port);
+main();
 
 export {};

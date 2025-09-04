@@ -1,4 +1,4 @@
-import { Tool } from "@langchain/core/tools";
+import { DynamicStructuredTool, Tool } from "@langchain/core/tools";
 import { Runnable } from "@langchain/core/runnables";
 import { MemorySaver } from "@langchain/langgraph";
 import { ChatOpenAI } from "@langchain/openai";
@@ -7,11 +7,14 @@ import { HumanMessage } from "@langchain/core/messages";
 
 export class ReactAgent {
   public agent;
-  public tools: Tool[] = [];
+  public tools: DynamicStructuredTool[] = [];
   public llm!: Runnable;
   public memorySaver!: MemorySaver;
 
-  constructor() {
+  constructor(
+    { tools }: { tools: DynamicStructuredTool[] }
+  ) {
+    this.tools = tools;
     this.memorySaver = new MemorySaver();
     this.llm = new ChatOpenAI({
       openAIApiKey: process.env.OPENAI_API_KEY,
