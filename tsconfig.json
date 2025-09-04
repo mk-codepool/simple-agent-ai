@@ -1,8 +1,8 @@
 {
+  "rootDir": "src",
   "compilerOptions": {
     "target": "ES2020",
     "module": "commonjs",
-    "rootDir": "src",
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
@@ -13,5 +13,5 @@
     "moduleResolution": "node",
     "types": ["node"]
   },
-  "include": ["src", "env.ts"]
+  "include": ["src"]
 }

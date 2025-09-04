@@ -1,9 +1,7 @@
 {
-  "name": "ai-web-user",
+  "name": "simple-agent-ai",
   "version": "0.1.0",
   "private": true,
-  "description": "TypeScript Express REST API with hot reload",
-  "main": "dist/index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --transpile-only --poll --ignore-watch node_modules --no-notify src/index.ts",
     "build": "rimraf dist && tsc -p tsconfig.json",
@@ -14,7 +12,6 @@
     "format:write": "prettier --write .",
     "typecheck": "tsc --noEmit",
     "start:mcp:playwright": "mcp-server-playwright --port 8931 --isolated",
-    "playwright": "playwright",
     "postinstall": "npx playwright install chromium"
   },
   "keywords": [],
@@ -24,13 +21,17 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@openai/agents": "^0.0.8",
-    "@playwright/mcp": "^0.0.34",
-    "cors": "*",
-    "dotenv": "*",
-    "express": "*",
-    "helmet": "*",
-    "zod": "3.25.67"
+    "@langchain/community": "^0.3.54",
+    "@langchain/core": "^0.3.73",
+    "@langchain/langgraph": "^0.4.9",
+    "@langchain/openai": "^0.6.11",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "langchain": "^0.3.32",
+    "playwright": "^1.55.0",
+    "zod": "^3.25.67"
   },
   "devDependencies": {
     "@types/cors": "*",

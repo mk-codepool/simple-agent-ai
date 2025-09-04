@@ -13,11 +13,12 @@ TypeScript Express REST API with hot reload.
 ## Setup
 
 1. Install dependencies
-2. Create a `.env` file (optional):
+2. Create a `.env` file:
 
 ```
 PORT=3000
 NODE_ENV=development
+OPENAI_API_KEY=your_openai_api_key_here
 ```
 
 3. Start dev server:
