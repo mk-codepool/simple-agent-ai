@@ -3,7 +3,7 @@ import { AgentManager } from '../../../../agent-manager/agent-manager';
 
 export type AgentManagerResponse = { message: string };
 
-const handleAgentManager = async (req: Request, res: Response, agentManager: AgentManager): Promise<void> => {
+export const createAgentManagerController = (agentManager: AgentManager) => async (req: Request, res: Response): Promise<void> => {
 	const { input } = req.body;
 	try {
 		const result = await agentManager.reactAgent.invoke(input);
@@ -11,8 +11,6 @@ const handleAgentManager = async (req: Request, res: Response, agentManager: Age
 		const resultMessage = result.messages[totalMessages - 1].content;
 		res.status(200).json({ message: resultMessage });
 	} catch (error) {
-		res.status(500).json({ message: 'Error' });
+		res.status(500).json({ message: error });
 	}
 };
-
-export const createAgentManagerController = (agentManager: AgentManager) => (req: Request, res: Response) => handleAgentManager(req, res, agentManager);
