@@ -37,23 +37,4 @@ export class ReactAgent {
       return error;
     });
   }
-
-  public async *stream(input: string): AsyncGenerator<any> {
-    const userMessage = { messages: new HumanMessage(input) }
-    const configurable = { configurable: { thread_id: '1' } }
-    try {
-      const stream = await this.agent.stream(userMessage, configurable);
-      let chunkCount = 0;
-      for await (const chunk of stream) {
-        chunkCount++;
-        console.log(`Streaming chunk ${chunkCount}:`, chunk);
-        yield chunk;
-      }
-      console.log(`Total chunks streamed: ${chunkCount}`);
-    } catch (error) {
-      console.log('streaming error');
-      console.log(error);
-      yield { messages: [new HumanMessage('Error occurred during streaming')] };
-    }
-  }
 }
