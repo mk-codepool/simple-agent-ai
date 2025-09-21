@@ -1,0 +1,1072 @@
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3vevF1pKTMh7kSzgwyOmcpFq5I8",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_ddsfKrYKmVCgrtGm9Uy4UTgm",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 1338,
+            "completionTokens": 19,
+            "totalTokens": 1357
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 1338,
+            "completion_tokens": 19,
+            "total_tokens": 1357,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_navigate",
+            "args": {
+              "url": "https://www.google.com"
+            },
+            "type": "tool_call",
+            "id": "call_ddsfKrYKmVCgrtGm9Uy4UTgm"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 19,
+          "input_tokens": 1338,
+          "total_tokens": 1357,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 0
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+},
+{
+  "tools": {
+    "messages": [
+      {
+        "id": "e1c929cd-5db3-4feb-ae72-27993de66b29",
+        "content": "### Ran Playwright code\n```js\nawait page.goto('https://www.google.com');\n```\n\n### New console messages\n- [INFO] Autofocus processing was blocked because a document already has a focused element. @ https://...\n\n### Page state\n- Page URL: https://www.google.com/\n- Page Title: Google\n- Page Snapshot:\n```yaml\n- generic [ref=e1]:\n  - generic [ref=e2]:\n    - navigation [ref=e3]:\n      - link [ref=e4] [cursor=pointer]:\n        - /url: https://about.google/?fg=1&utm_source=google-PL&utm_medium=referral&utm_campaign=hp-header\n        - text: O nas\n      - link [ref=e5] [cursor=pointer]:\n        - /url: https://store.google.com/PL?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=pl-PL\n        - text: Google Store\n      - generic [ref=e7]:\n        - generic [ref=e8]:\n          - link [ref=e10] [cursor=pointer]:\n            - /url: https://mail.google.com/mail/&ogbl\n            - text: Gmail\n          - link [ref=e12] [cursor=pointer]:\n            - /url: https://www.google.com/imghp?hl=pl&ogbl\n            - text: Grafika\n        - button [ref=e15] [cursor=pointer]:\n          - img [ref=e16]\n        - link [ref=e20] [cursor=pointer]:\n          - /url: https://accounts.google.com/ServiceLogin?hl=pl&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e\n          - text: Zaloguj się\n    - img [ref=e23]\n    - search [ref=e31]:\n
+    - generic [ref=e33]:\n        - generic [ref=e35]:\n          - img [ref=e39]\n          - combobox [ref=e42]\n          - generic [ref=e45]:\n            - button [ref=e46] [cursor=pointer]:\n              - img [ref=e48]\n
+ - button [ref=e50] [cursor=pointer]:\n              - img [ref=e51]\n            - button [ref=e53] [cursor=pointer]:\n              - img [ref=e54]\n        - generic [ref=e57]:\n          - button [ref=e58] [cursor=pointer]: Szukaj w Google\n          - button [ref=e59] [cursor=pointer]: Szczęśliwy traf\n    - contentinfo [ref=e62]:\n      - generic [ref=e63]: Polska\n      - generic [ref=e64]:\n        - generic [ref=e65]:\n          - link [ref=e66] [cursor=pointer]:\n
+            - /url: https://www.google.com/intl/pl_pl/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1\n            - text: Reklamuj się\n          - link [ref=e67] [cursor=pointer]:\n            - /url: https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1\n            - text: Dla firm\n          - link [ref=e68] [cursor=pointer]:\n            - /url: https://google.com/search/howsearchworks/?fg=1\n            - text: Jak działa wyszukiwarka\n        - link [ref=e70] [cursor=pointer]:\n          - /url: https://sustainability.google/intl/pl/carbon-free/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=\n          - text: \"Już 3 dekady działamy na rzecz klimatu: zobacz, co robimy\"\n        - generic [ref=e71]:\n          - link [ref=e72] [cursor=pointer]:\n            - /url: https://policies.google.com/privacy?hl=pl&fg=1\n            - text: Prywatność\n          - link [ref=e73] [cursor=pointer]:\n            - /url: https://policies.google.com/terms?hl=pl&fg=1\n
+    - text: Warunki\n          - button [ref=e77] [cursor=pointer]:\n            - generic [ref=e78]: Ustawienia\n  - generic:\n    - dialog \"Zanim przejdziesz do wyszukiwarki Google\":\n      - generic [ref=e85]:\n        - generic [ref=e87]:\n          - img \"Google\" [ref=e88]\n          - generic [ref=e89]:\n            - 'button \"Język: ‪polski‬\" [active] [ref=e91] [cursor=pointer]':\n              - generic [ref=e92]:\n                - img\n                - generic [ref=e93]: pl\n            - link \"Zaloguj się\" [ref=e94] [cursor=pointer]\n        - generic [ref=e95]:\n          - heading \"Zanim przejdziesz do Google\" [level=1] [ref=e96]\n          - generic [ref=e97]:\n            - generic [ref=e98]:\n              - text: Używamy\n              - link \"plików cookie\" [ref=e99] [cursor=pointer]:\n                - /url: https://policies.google.com/technologies/cookies?utm_source=ucbs&hl=pl\n              - text: \"i innych danych do:\"\n              - list [ref=e100]:\n                - listitem [ref=e101]: Dostarczania i utrzymywania usług Google\n                - listitem [ref=e102]: Śledzenia przerw w działaniu usług i ochrony użytkowników przed spamem, oszustwami i nadużyciami\n                - listitem [ref=e103]: Pomiaru zaangażowania odbiorców oraz generowania statystyk dotyczących stron, aby lepiej zrozumieć, jak nasze usługi są używane, i aby poprawiać jakość tych usług\n
+    - generic [ref=e104]:\n              - text: \"Jeśli wybierzesz „Zaakceptuj wszystko”, będziemy używać plików cookie i innych danych także do:\"\n              - list [ref=e105]:\n                - listitem [ref=e106]: Opracowywania i udoskonalania nowych usług\n                - listitem [ref=e107]: Wyświetlania reklam i mierzenia ich skuteczności\n                - listitem [ref=e108]: Wyświetlania spersonalizowanych treści (w zależności od Twoich ustawień)\n
+       - listitem [ref=e109]: Wyświetlania spersonalizowanych reklam (w zależności od Twoich ustawień)\n              - generic [ref=e110]: Jeśli wybierzesz „Odrzuć wszystko”, nie będziemy używać plików cookie w tych dodatkowych celach.\n
+           - generic [ref=e111]: Treści niespersonalizowane są dobierane na podstawie takich czynników jak aktualnie przeglądana treść, aktywność podczas bieżącej sesji w wyszukiwarce czy Twoja lokalizacja. Reklamy niespersonalizowane są wyświetlane na podstawie aktualnie przeglądanej treści oraz Twojej przybliżonej lokalizacji. Reklamy i treści spersonalizowane mogą dodatkowo zawierać trafniejsze wyniki, rekomendacje oraz lepiej dopasowane reklamy oparte na wcześniejszej aktywności w przeglądarce, np. wcześniejszych wyszukiwaniach w Google. W odpowiednich przypadkach używamy plików cookie i danych także do dostosowywania usług do wieku odbiorcy.\n            - generic [ref=e112]: Aby zobaczyć dodatkowe informacje, w tym szczegóły na temat zarządzania ustawieniami prywatności, wybierz „Więcej opcji”. W każdej chwili możesz też wejść na g.co/privacytools.\n        - generic [ref=e113]:\n          - generic [ref=e114]:\n            - button \"Odrzuć wszystko\" [ref=e115] [cursor=pointer]\n            - button \"Zaakceptuj wszystko\" [ref=e116] [cursor=pointer]\n          - link \"Więcej opcji dotyczących ustawień personalizacji i plików cookie\" [ref=e118] [cursor=pointer]:\n
+         - generic \"Więcej opcji dotyczących ustawień personalizacji i plików cookie\" [ref=e119]: Więcej opcji\n        - generic [ref=e120]:\n          - link \"Prywatność\" [ref=e121] [cursor=pointer]:\n            - /url: https://policies.google.com/privacy?hl=pl&fg=1&utm_source=ucbs\n          - generic [ref=e122]: ·\n          - link \"Warunki\" [ref=e123] [cursor=pointer]:\n            - /url: https://policies.google.com/terms?hl=pl&fg=1&utm_source=ucbs\n```\n",
+        "name": "browser_navigate",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "tool_call_id": "call_ddsfKrYKmVCgrtGm9Uy4UTgm",
+        "artifact": []
+      }
+    ]
+  }
+}
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3virf3Q63hpxbDt7ExHOG2wRKy7",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_fDW0sITpvNttmzR4fjZaB7RK",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 3345,
+            "completionTokens": 32,
+            "totalTokens": 3377
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 3345,
+            "completion_tokens": 32,
+            "total_tokens": 3377,
+            "prompt_tokens_details": {
+              "cached_tokens": 1280,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_type",
+            "args": {
+              "element": "Search Google",
+              "ref": "e31",
+              "text": "Half life alynx",
+              "submit": true
+            },
+            "type": "tool_call",
+            "id": "call_fDW0sITpvNttmzR4fjZaB7RK"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 32,
+          "input_tokens": 3345,
+          "total_tokens": 3377,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 1280
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+}
+{
+  "tools": {
+    "messages": [
+      {
+        "id": "1681e0c2-88d0-4101-a6bd-01aa6a6c553f",
+        "content": "Error: MCP tool 'browser_type' on server 'playwright' returned an error: ### Result\nError: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('aria-ref=e31')\u001b[22m\n\u001b[2m    - locator resolved to <form method=\"GET\" role=\"search\" action=\"/search\" autocomplete=\"off\">…</form>\u001b[22m\n\u001b[2m    - fill(\"Half life alynx\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n\n\n### Ran Playwright code\n```js\nawait page.locator('form').fill('Half life alynx');\n```\n\n Please fix your mistakes.",
+        "name": "browser_type",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "tool_call_id": "call_fDW0sITpvNttmzR4fjZaB7RK"
+      }
+    ]
+  }
+}
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3vjyyFrsQVIdbIeM0np4KweWGUB",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_0kUHgFPslTcqn7lheTlzjDPL",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 3587,
+            "completionTokens": 32,
+            "totalTokens": 3619
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 3587,
+            "completion_tokens": 32,
+            "total_tokens": 3619,
+            "prompt_tokens_details": {
+              "cached_tokens": 3328,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_type",
+            "args": {
+              "element": "Search Google",
+              "ref": "e35",
+              "text": "Half life alynx",
+              "submit": true
+            },
+            "type": "tool_call",
+            "id": "call_0kUHgFPslTcqn7lheTlzjDPL"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 32,
+          "input_tokens": 3587,
+          "total_tokens": 3619,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 3328
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+}
+{
+  "tools": {
+    "messages": [
+      {
+        "id": "a5670fdd-a088-4052-97c4-ca8bd4ffae70",
+        "content": "Error: MCP tool 'browser_type' on server 'playwright' returned an error: ### Result\nError: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('aria-ref=e35')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"SDkEP\">…</div>\u001b[22m\n\u001b[2m    - fill(\"Half life alynx\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n\n\n### Ran Playwright code\n```js\nawait page.locator('.SDkEP').fill('Half life alynx');\n```\n\n Please fix your mistakes.",
+        "name": "browser_type",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "tool_call_id": "call_0kUHgFPslTcqn7lheTlzjDPL"
+      }
+    ]
+  }
+}
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3vlaZwTw1UGQH8nkxsuVRkLAk7X",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_gqyqXqztq9LY2HD4Zq2rgd4b",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 3821,
+            "completionTokens": 21,
+            "totalTokens": 3842
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 3821,
+            "completion_tokens": 21,
+            "total_tokens": 3842,
+            "prompt_tokens_details": {
+              "cached_tokens": 3584,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_click",
+            "args": {
+              "element": "Search in Google",
+              "ref": "e58"
+            },
+            "type": "tool_call",
+            "id": "call_gqyqXqztq9LY2HD4Zq2rgd4b"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 21,
+          "input_tokens": 3821,
+          "total_tokens": 3842,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 3584
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+}
+{
+  "tools": {
+    "messages": [
+      {
+        "id": "0a120d5f-ad80-4df8-ada8-1ccc53a2b4d4",
+        "content": "Error: MCP tool 'browser_click' on server 'playwright' returned an error: ### Result\nTimeoutError: locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('aria-ref=e58')\u001b[22m\n\u001b[2m    - locator resolved to <input name=\"btnK\" tabindex=\"0\" role=\"button\" type=\"submit\" class=\"gNO89b\" value=\"Szukaj w Google\" aria-label=\"Szukaj w Google\" data-ved=\"0ahUKEwismPOq_dOPAxXwRvEDHVNyM8kQ4dUDCBI\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <li class=\"gowsYd ohEWPc\">Wyświetlania spersonalizowanych reklam (w zależno…</li> from <div class=\"Fgvgjc\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <li class=\"gowsYd ohEWPc\">Wyświetlania spersonalizowanych reklam (w zależno…</li> from <div class=\"Fgvgjc\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    10 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <li class=\"gowsYd ohEWPc\">Wyświetlania spersonalizowanych reklam (w zależno…</li> from <div class=\"Fgvgjc\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n### Ran Playwright code\n```js\nawait page.getByLabel('Szukaj w Google').nth(1).click();\n```\n\n Please fix your mistakes.",
+        "name": "browser_click",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "tool_call_id": "call_gqyqXqztq9LY2HD4Zq2rgd4b"
+      }
+    ]
+  }
+}
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3vrgTf1BiKxQtbYzaYiAt6h2zxk",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_MBckbmqm8q8UdGyx56BVNhKg",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 4526,
+            "completionTokens": 20,
+            "totalTokens": 4546
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 4526,
+            "completion_tokens": 20,
+            "total_tokens": 4546,
+            "prompt_tokens_details": {
+              "cached_tokens": 3712,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_click",
+            "args": {
+              "element": "search button",
+              "ref": "e58"
+            },
+            "type": "tool_call",
+            "id": "call_MBckbmqm8q8UdGyx56BVNhKg"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 20,
+          "input_tokens": 4526,
+          "total_tokens": 4546,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 3712
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+}
+{
+  "tools": {
+    "messages": [
+      {
+        "id": "62ca10fb-eda4-4103-abc7-7f561b141e34",
+        "content": "Error: MCP tool 'browser_click' on server 'playwright' returned an error: ### Result\nTimeoutError: locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('aria-ref=e58')\u001b[22m\n\u001b[2m    - locator resolved to <input name=\"btnK\" tabindex=\"0\" role=\"button\" type=\"submit\" class=\"gNO89b\" value=\"Szukaj w Google\" aria-label=\"Szukaj w Google\" data-ved=\"0ahUKEwismPOq_dOPAxXwRvEDHVNyM8kQ4dUDCBI\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <li class=\"gowsYd ohEWPc\">Wyświetlania spersonalizowanych reklam (w zależno…</li> from <div class=\"Fgvgjc\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <li class=\"gowsYd ohEWPc\">Wyświetlania spersonalizowanych reklam (w zależno…</li> from <div class=\"Fgvgjc\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    10 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <li class=\"gowsYd ohEWPc\">Wyświetlania spersonalizowanych reklam (w zależno…</li> from <div class=\"Fgvgjc\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n### Ran Playwright code\n```js\nawait page.getByLabel('Szukaj w Google').nth(1).click();\n```\n\n Please fix your mistakes.",
+        "name": "browser_click",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "tool_call_id": "call_MBckbmqm8q8UdGyx56BVNhKg"
+      }
+    ]
+  }
+}
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3vymwjmj4tOrDv1P51ieU6jDJHE",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_Zc8VqtTdEYW8UDIr48pl2JKO",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 5230,
+            "completionTokens": 20,
+            "totalTokens": 5250
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 5230,
+            "completion_tokens": 20,
+            "total_tokens": 5250,
+            "prompt_tokens_details": {
+              "cached_tokens": 4480,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_click",
+            "args": {
+              "element": "search button",
+              "ref": "e58"
+            },
+            "type": "tool_call",
+            "id": "call_Zc8VqtTdEYW8UDIr48pl2JKO"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 20,
+          "input_tokens": 5230,
+          "total_tokens": 5250,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 4480
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+}
+{
+  "tools": {
+    "messages": [
+      {
+        "id": "1fb1b179-fd06-4fc7-acf9-211c8321147b",
+        "content": "Error: MCP tool 'browser_click' on server 'playwright' returned an error: ### Result\nTimeoutError: locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('aria-ref=e58')\u001b[22m\n\u001b[2m    - locator resolved to <input name=\"btnK\" tabindex=\"0\" role=\"button\" type=\"submit\" class=\"gNO89b\" value=\"Szukaj w Google\" aria-label=\"Szukaj w Google\" data-ved=\"0ahUKEwismPOq_dOPAxXwRvEDHVNyM8kQ4dUDCBI\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <li class=\"gowsYd ohEWPc\">Wyświetlania spersonalizowanych reklam (w zależno…</li> from <div class=\"Fgvgjc\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <li class=\"gowsYd ohEWPc\">Wyświetlania spersonalizowanych reklam (w zależno…</li> from <div class=\"Fgvgjc\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    9 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <li class=\"gowsYd ohEWPc\">Wyświetlania spersonalizowanych reklam (w zależno…</li> from <div class=\"Fgvgjc\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n\n### Ran Playwright code\n```js\nawait page.getByLabel('Szukaj w Google').nth(1).click();\n```\n\n Please fix your mistakes.",
+        "name": "browser_click",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "tool_call_id": "call_Zc8VqtTdEYW8UDIr48pl2JKO"
+      }
+    ]
+  }
+}
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3w5ItfEd91HAqoZsqr5tlxttEuH",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_o01UCSvv4cJYYyNCY9AdOSoY",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 5934,
+            "completionTokens": 20,
+            "totalTokens": 5954
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 5934,
+            "completion_tokens": 20,
+            "total_tokens": 5954,
+            "prompt_tokens_details": {
+              "cached_tokens": 5120,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_click",
+            "args": {
+              "element": "search button",
+              "ref": "e58"
+            },
+            "type": "tool_call",
+            "id": "call_o01UCSvv4cJYYyNCY9AdOSoY"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 20,
+          "input_tokens": 5934,
+          "total_tokens": 5954,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 5120
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+}
+{
+  "tools": {
+    "messages": [
+      {
+        "id": "1bd4649e-307f-444e-bfdb-abe07d5faa0e",
+        "content": "Error: MCP tool 'browser_click' on server 'playwright' returned an error: ### Result\nTimeoutError: locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('aria-ref=e58')\u001b[22m\n\u001b[2m    - locator resolved to <input name=\"btnK\" tabindex=\"0\" role=\"button\" type=\"submit\" class=\"gNO89b\" value=\"Szukaj w Google\" aria-label=\"Szukaj w Google\" data-ved=\"0ahUKEwismPOq_dOPAxXwRvEDHVNyM8kQ4dUDCBI\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <li class=\"gowsYd ohEWPc\">Wyświetlania spersonalizowanych reklam (w zależno…</li> from <div class=\"Fgvgjc\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <li class=\"gowsYd ohEWPc\">Wyświetlania spersonalizowanych reklam (w zależno…</li> from <div class=\"Fgvgjc\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    10 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <li class=\"gowsYd ohEWPc\">Wyświetlania spersonalizowanych reklam (w zależno…</li> from <div class=\"Fgvgjc\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n### Ran Playwright code\n```js\nawait page.getByLabel('Szukaj w Google').nth(1).click();\n```\n\n Please fix your mistakes.",
+        "name": "browser_click",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "tool_call_id": "call_o01UCSvv4cJYYyNCY9AdOSoY"
+      }
+    ]
+  }
+}
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3wBXuC6h7p7stdkux0YOhZLYDhN",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_Nrdh8ROccXAGJMxCNsiDrhrV",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 6638,
+            "completionTokens": 50,
+            "totalTokens": 6688
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 6638,
+            "completion_tokens": 50,
+            "total_tokens": 6688,
+            "prompt_tokens_details": {
+              "cached_tokens": 5888,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_evaluate",
+            "args": {
+              "function": "() => { const input = document.querySelector('input[name=\"q\"]'); input.value = 'Half life alynx'; input.form.dispatchEvent(new Event('submit')); }"
+            },
+            "type": "tool_call",
+            "id": "call_Nrdh8ROccXAGJMxCNsiDrhrV"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 50,
+          "input_tokens": 6638,
+          "total_tokens": 6688,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 5888
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+}
+{
+  "tools": {
+    "messages": [
+      {
+        "id": "27b67e82-4930-4590-a898-c029c048822e",
+        "content": "Error: MCP tool 'browser_evaluate' on server 'playwright' returned an error: ### Result\nError: page._evaluateFunction: TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at evaluate (:290:30), <anonymous>:1:78)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n\n### Ran Playwright code\n```js\nawait page.evaluate('() => { const input = document.querySelector(\\'input[name=\"q\"]\\'); input.value = \\'Half life alynx\\'; input.form.dispatchEvent(new Event(\\'submit\\')); }');\n```\n\n Please fix your mistakes.",
+        "name": "browser_evaluate",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "tool_call_id": "call_Nrdh8ROccXAGJMxCNsiDrhrV"
+      }
+    ]
+  }
+}
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3wC3B2gH05LCmsvnuBUYZzN6bfc",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_kSOTuApF68jUSd5pgqKpatCb",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 6844,
+            "completionTokens": 47,
+            "totalTokens": 6891
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 6844,
+            "completion_tokens": 47,
+            "total_tokens": 6891,
+            "prompt_tokens_details": {
+              "cached_tokens": 6656,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_evaluate",
+            "args": {
+              "function": "() => document.querySelector('input[name=\"q\"]').value='Half life alynx'; document.querySelector('input[name=\"btnK\"]').click();"
+            },
+            "type": "tool_call",
+            "id": "call_kSOTuApF68jUSd5pgqKpatCb"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 47,
+          "input_tokens": 6844,
+          "total_tokens": 6891,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 6656
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+}
+{
+  "tools": {
+    "messages": [
+      {
+        "id": "858da295-9f98-43cf-9a19-e49fdbde4813",
+        "content": "Error: MCP tool 'browser_evaluate' on server 'playwright' returned an error: ### Result\nError: page._evaluateFunction: Passed function is not well-serializable!\n\n### Ran Playwright code\n```js\nawait page.evaluate('() => document.querySelector(\\'input[name=\"q\"]\\').value=\\'Half life alynx\\'; document.querySelector(\\'input[name=\"btnK\"]\\').click();');\n```\n\n Please fix your mistakes.",
+        "name": "browser_evaluate",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "tool_call_id": "call_kSOTuApF68jUSd5pgqKpatCb"
+      }
+    ]
+  }
+}
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3wEptGVtlNmgaE4Nha6IFRf8TwY",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_3HZk3krsPtpYjMIgPbug940j",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 6995,
+            "completionTokens": 37,
+            "totalTokens": 7032
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 6995,
+            "completion_tokens": 37,
+            "total_tokens": 7032,
+            "prompt_tokens_details": {
+              "cached_tokens": 6784,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_fill_form",
+            "args": {
+              "fields": "[Array]"
+            },
+            "type": "tool_call",
+            "id": "call_3HZk3krsPtpYjMIgPbug940j"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 37,
+          "input_tokens": 6995,
+          "total_tokens": 7032,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 6784
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+}
+{
+  "tools": {
+    "messages": [
+      {
+        "id": "d13ea6d1-919b-4d7c-8cad-9dff0154693d",
+        "content": "Error: MCP tool 'browser_fill_form' on server 'playwright' returned an error: ### Result\nError: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('aria-ref=e35')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"SDkEP\">…</div>\u001b[22m\n\u001b[2m    - fill(\"Half life alynx\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n\n\n Please fix your mistakes.",
+        "name": "browser_fill_form",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "tool_call_id": "call_3HZk3krsPtpYjMIgPbug940j"
+      }
+    ]
+  }
+}
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3wGTIdSglZYXHRMSfIfBGRtXh4v",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_DZtlKuvkvn4dFcULTCyfxEBn",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 7208,
+            "completionTokens": 67,
+            "totalTokens": 7275
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 7208,
+            "completion_tokens": 67,
+            "total_tokens": 7275,
+            "prompt_tokens_details": {
+              "cached_tokens": 6912,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_evaluate",
+            "args": {
+              "function": "() => { const input = document.querySelector('input[name=\"q\"]'); input.focus(); input.value = 'Half life alynx'; input.dispatchEvent(new Event('input', { bubbles: true })); input.form.dispatchEvent(new Event('submit')); }"
+            },
+            "type": "tool_call",
+            "id": "call_DZtlKuvkvn4dFcULTCyfxEBn"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 67,
+          "input_tokens": 7208,
+          "total_tokens": 7275,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 6912
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+}
+{
+  "tools": {
+    "messages": [
+      {
+        "id": "6b675bee-6b32-48e4-9571-2d46a2943fd1",
+        "content": "Error: MCP tool 'browser_evaluate' on server 'playwright' returned an error: ### Result\nError: page._evaluateFunction: TypeError: Cannot read properties of null (reading 'focus')\n    at eval (eval at evaluate (:290:30), <anonymous>:1:72)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n\n### Ran Playwright code\n```js\nawait page.evaluate('() => { const input = document.querySelector(\\'input[name=\"q\"]\\'); input.focus(); input.value = \\'Half life alynx\\'; input.dispatchEvent(new Event(\\'input\\', { bubbles: true })); input.form.dispatchEvent(new Event(\\'submit\\')); }');\n```\n\n Please fix your mistakes.",
+        "name": "browser_evaluate",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "tool_call_id": "call_DZtlKuvkvn4dFcULTCyfxEBn"
+      }
+    ]
+  }
+}
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3wI1RzgBQgbPLy1WPJWbCFBdCBs",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_HqnhXgxLVetoZA8Z25RZ5cGd",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 7448,
+            "completionTokens": 45,
+            "totalTokens": 7493
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 7448,
+            "completion_tokens": 45,
+            "total_tokens": 7493,
+            "prompt_tokens_details": {
+              "cached_tokens": 7168,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_evaluate",
+            "args": {
+              "function": "() => { document.querySelector('input[name=\"q\"]').value = 'Half life alynx'; document.querySelector('form').submit(); }"
+            },
+            "type": "tool_call",
+            "id": "call_HqnhXgxLVetoZA8Z25RZ5cGd"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 45,
+          "input_tokens": 7448,
+          "total_tokens": 7493,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 7168
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+}
+{
+  "tools": {
+    "messages": [
+      {
+        "id": "2cb6a3b2-46ab-42ce-bfe8-6c12c13e3f88",
+        "content": "Error: MCP tool 'browser_evaluate' on server 'playwright' returned an error: ### Result\nError: page._evaluateFunction: TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at evaluate (:290:30), <anonymous>:1:57)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n\n### Ran Playwright code\n```js\nawait page.evaluate('() => { document.querySelector(\\'input[name=\"q\"]\\').value = \\'Half life alynx\\'; document.querySelector(\\'form\\').submit(); }');\n```\n\n Please fix your mistakes.",
+        "name": "browser_evaluate",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "tool_call_id": "call_HqnhXgxLVetoZA8Z25RZ5cGd"
+      }
+    ]
+  }
+}
+{
+  "agent": {
+    "messages": [
+      {
+        "id": "chatcmpl-CF3wKgIieLorDOFqh3lTtrB3REUgV",
+        "content": "",
+        "additional_kwargs": {
+          "tool_calls": [
+            {
+              "id": "call_u7htRM1C9CbKL2PYx89xO3lm",
+              "type": "function",
+              "function": "[Object]"
+            }
+          ]
+        },
+        "response_metadata": {
+          "tokenUsage": {
+            "promptTokens": 7644,
+            "completionTokens": 20,
+            "totalTokens": 7664
+          },
+          "finish_reason": "tool_calls",
+          "model_name": "gpt-4o-mini-2024-07-18",
+          "usage": {
+            "prompt_tokens": 7644,
+            "completion_tokens": 20,
+            "total_tokens": 7664,
+            "prompt_tokens_details": {
+              "cached_tokens": 7424,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_560af6e559"
+        },
+        "tool_calls": [
+          {
+            "name": "browser_click",
+            "args": {
+              "element": "Gmail",
+              "ref": "e10"
+            },
+            "type": "tool_call",
+            "id": "call_u7htRM1C9CbKL2PYx89xO3lm"
+          }
+        ],
+        "invalid_tool_calls": [],
+        "usage_metadata": {
+          "output_tokens": 20,
+          "input_tokens": 7644,
+          "total_tokens": 7664,
+          "input_token_details": {
+            "audio": 0,
+            "cache_read": 7424
+          },
+          "output_token_details": {
+            "audio": 0,
+            "reasoning": 0
+          }
+        }
+      }
+    ]
+  }
+}

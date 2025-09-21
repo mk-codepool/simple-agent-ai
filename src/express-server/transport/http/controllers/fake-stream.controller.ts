@@ -1,40 +1,8 @@
 import { Request, Response } from 'express';
 import { AgentManager } from '../../../../agent-manager/agent-manager';
-import { LangChainStreamChunk, MessageKwargs } from '../../../../types/streaming.types';
+import { AgentChunkResponse, LangChainStreamChunk } from '../../../../types/streaming.types';
 import * as fakeStreamData from './fake-stream.json';
-import { ToolCall } from '@langchain/core/messages/tool';
-import { BaseMessage, UsageMetadata } from '@langchain/core/messages';
-
-interface AgentChunkResponse {
-  id: string;
-  type: 'agent' | 'tools';
-  content: string;
-  timestamp: Date;
-  metadata?: {
-    toolCalls?: ToolCall[];
-    tokens?: UsageMetadata;
-    responseTime?: number;
-  };
-  threadId: string;
-}
-
-function getAgentChunkResponse(chunk: LangChainStreamChunk, threadId: string, messageId: string): AgentChunkResponse {
-  const { agent, tools } = chunk;
-  const messages = agent?.messages || tools?.messages || [];
-  const message = messages[0];
-  const kwargs = message?.kwargs as MessageKwargs;
-  const timestamp = new Date();
-  const type = agent ? 'agent' : 'tools';
-  
-  return {
-    id: messageId,
-    type,
-    content: kwargs?.content,
-    timestamp,
-    metadata: kwargs?.metadata,
-    threadId,
-  };
-}
+import { getAgentChunkResponse } from '../../helpers/get-agent-chunk-response.helper';
 
 export const createAgentReactFakeStreamController = (agentManager: AgentManager) => async (req: Request, res: Response): Promise<void> => {
   const input: string = req.body.input;

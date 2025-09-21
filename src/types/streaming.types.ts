@@ -73,3 +73,18 @@ export interface StreamRequestBody {
   userId?: string;
   metadata?: Record<string, any>;
 }
+
+export interface AgentChunkResponse {
+  id: string;
+  type: 'agent' | 'tools';
+  content: string;
+  timestamp: Date;
+  metadata?: {
+    toolCalls?: ToolCall[];
+    tokens?: UsageMetadata;
+    responseTime?: number;
+    toolCallId?: string;
+    toolName?: string;
+  };
+  threadId: string;
+}
